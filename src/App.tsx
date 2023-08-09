@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+import { CardLogin } from "./components/cardLogin";
+import { Header } from "./components/header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid
+      container
+      display="flex"
+      justifyContent="center"
+      sx={{
+        background: "linear-gradient(135deg, #f8f9fa, #ced4da)",
+        minHeight: "100vh",
+      }}
+    >
+      <Grid item xs={12}>
+        <Header />
+      </Grid>
+      <Grid item xs={12} md={8} sx={{ marginTop: "-225px" }}>
+        <CardLogin />
+      </Grid>
+    </Grid>
   );
 }
 
