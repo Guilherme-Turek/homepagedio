@@ -1,25 +1,21 @@
-import { Grid } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import theme from "./theme/theme";
+import DefaultLayout from "./components/DefaultLayout/DefaultLayout";
 import { CardLogin } from "./components/cardLogin";
-import { Header } from "./components/header";
 
 function App() {
   return (
-    <Grid
-      container
-      display="flex"
-      justifyContent="center"
-      sx={{
-        background: "linear-gradient(135deg, #f8f9fa, #ced4da)",
-        minHeight: "100vh",
-      }}
-    >
-      <Grid item xs={12}>
-        <Header />
-      </Grid>
-      <Grid item xs={12} md={8} sx={{ marginTop: "-225px" }}>
-        <CardLogin />
-      </Grid>
-    </Grid>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <DefaultLayout>
+          <Routes>
+            <Route path="/" element={<CardLogin />} />
+            <Route path="/account" element={<h1>A</h1>} />
+          </Routes>
+        </DefaultLayout>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

@@ -1,31 +1,18 @@
-import { AppBar, Toolbar, Typography, Container } from "@mui/material";
+import React from "react";
+import { Container } from "@mui/material";
+import { useTheme } from "@mui/material/styles"; // Importe o useTheme
+import { StyledAppBar, HeaderText } from "./styles";
 
 export const Header: React.FC = () => {
+  const theme = useTheme();
+
   return (
-    <AppBar
-      position="static"
-      sx={{ backgroundColor: "#343a40", color: "#fff" }}
-    >
+    <StyledAppBar position="static" theme={theme}>
       <Container maxWidth="xl">
-        <Toolbar
-          disableGutters
-          sx={{ display: "flex", justifyContent: "center" }}
-        >
-          <Typography
-            variant="h4"
-            noWrap
-            sx={{
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Homepage DIO
-          </Typography>
-        </Toolbar>
+        <HeaderText variant="h3" noWrap align="center">
+          Dio Bank
+        </HeaderText>
       </Container>
-    </AppBar>
+    </StyledAppBar>
   );
 };
