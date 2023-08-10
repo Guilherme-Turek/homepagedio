@@ -5,7 +5,7 @@ interface IButton {
   event: () => void;
 }
 
-export const ButtonLogin: React.FC<IButton> = ({ content, event }) => {
+export const DButton: React.FC<IButton> = ({ content, event }) => {
   return (
     <Button
       fullWidth

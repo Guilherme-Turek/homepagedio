@@ -2,7 +2,7 @@ import { ThemeProvider } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import theme from "./theme/theme";
 import DefaultLayout from "./components/DefaultLayout/DefaultLayout";
-import { CardLogin } from "./components/cardLogin";
+import { CardLogin } from "./components/CardLogin";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import { Container, TextField, Typography } from "@mui/material";
-import { ButtonLogin } from "../button/Button";
-import { LoginForm } from "./LoginForm";
+import { DButton } from "../Dbutton/Button";
 import { handleLogin } from "../../services/handleLogin";
+import { LoginForm } from "./LoginForm";
 
 export const CardLogin: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ export const CardLogin: React.FC = () => {
           margin="normal"
           type="password"
         />
-        <ButtonLogin content="Entrar" event={handleLogin} />
+        <DButton content="Entrar" event={handleLogin} />
       </LoginForm>
     </Container>
   );
